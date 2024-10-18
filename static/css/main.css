@@ -154,6 +154,20 @@ iframe {
   color: #666666;
 }
 
+.cuztomh {
+  font-family: Poppins-Bold;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #454545;
+}
+
+.cuztomb {
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #656060;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/

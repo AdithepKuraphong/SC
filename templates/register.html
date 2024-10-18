@@ -30,11 +30,11 @@
 
                     {% with messages = get_flashed_messages(with_categories=true) %}
                         {% if messages %}
-                            {% for category, message in messages %}
-                                <div class="alert alert-{{ category }}">
+                            <div class="alert alert-danger">
+                                {% for category, message in messages %}
                                     {{ message }}
-                                </div>
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         {% endif %}
                     {% endwith %}
 
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Pin is required">
-                        <input class="input100" type="text" name="pin" pattern="\d{4}" maxlength="4" placeholder="Pin" required>
+                        <input class="input100" type="text" name="pin" pattern="\d{4}" maxlength="4" placeholder="4-digit Pin" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-key" aria-hidden="true"></i>
@@ -76,16 +76,18 @@
                         </button>
                     </div>
 
-                    <div>
+                    <div class="centered-block"></div>
+                    <div class="cuztomb">
                         <ul>
-                            <li>-เงื่อนไขรหัสผ่าน-</li>
-                            <li>1. ต้องมีความยาวอย่างน้อย 7 ตัวอักษร</li>
-                            <li>2. ต้องมีตัวอักษรตัวเล็ก (a-z)</li>
-                            <li>3. ต้องมีตัวอักษรตัวใหญ่ (A-Z)</li>
-                            <li>4. ต้องมีตัวเลข (0-9)</li>
-                            <li>5. ต้องมีสัญลักษณ์พิเศษ เช่น !@#$%^&*</li>
+                            <li class="cuztomh">"GOOD" Passwords must...</li>
+                            <li>• Contain 8 to 30 characters</li>
+                            <li>• Contain both lower&upper-case letters</li>
+                            <li>• Contain a number</li>
+                            <li>• Contain a special character (!@#$)</li>
+                            <li>• Don't be lazy! (1234,qwerty,4444)</li>
                         </ul>
                     </div>
+                    <div class="centered-block"></div>
 
                     <div class="text-center p-t-12">
                         <span class="txt1">

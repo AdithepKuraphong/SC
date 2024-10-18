@@ -199,7 +199,7 @@ def reset_password():
                 conn.execute('UPDATE users SET password = ?, last_password_change = ?, pin_attempts = 0 WHERE username = ?',
                              (hashed_password, datetime.now(), username))  # รีเซ็ต pin_attempts เมื่อสำเร็จ
                 conn.commit()
-                flash('เปลี่ยนรหัสผ่านเสร็จสิ้น!')
+                flash('เปลี่ยนรหัสผ่านเสร็จสิ้น!',"success")
             else:
                 # เพิ่มจำนวนครั้งที่พยายามกรอก PIN ผิด
                 attempts = user['pin_attempts'] + 1
