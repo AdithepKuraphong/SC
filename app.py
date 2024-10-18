@@ -65,7 +65,7 @@ def register():
         conn.commit()
         conn.close()
 
-        flash('ลงทะเบียนผู้ใช้สำเร็จ!')
+        flash('ลงทะเบียนผู้ใช้สำเร็จ!',"success")
         return redirect(url_for('login'))
 
     return render_template('register.html')
